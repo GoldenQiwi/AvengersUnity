@@ -1,0 +1,70 @@
+﻿@model IEnumerable<AvengersUnityIdentity.Models.Satisfaction>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="jumbotron background">
+
+    <h2>Satisfactions</h2>
+
+    <p>
+        @Html.ActionLink("Rédiger une satisfaction", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Mission.Titre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Titre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Identification_Heros)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Niveau)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Note)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contenu)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mission.Titre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Titre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Identification_Heros)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Niveau)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Note)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Contenu)
+                </td>
+                <td>
+                    @Html.ActionLink("Consulter", "Details", new { id = item.SatisfactionID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

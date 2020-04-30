@@ -1,0 +1,36 @@
+﻿@model AvengersUnityIdentity.Models.CustomUserRole
+
+@{
+    ViewBag.Title = "Edit";
+}
+    <div class="jumbotron background">
+        <h2>Modifier</h2>
+
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.UserId)
+
+                @Html.HiddenFor(model => model.RoleId)
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Sauvegarder les modifications" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div>
+            @Html.ActionLink("Retour", "Index")
+        </div>
+        </div>
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }
+        

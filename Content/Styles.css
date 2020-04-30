@@ -1,0 +1,51 @@
+﻿body {
+    background-image: url(Images/avengersUnity.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.jumbotron1 {
+    background-image: url(Images/avengersBanner.png);
+    background-size: cover;
+    height: 300px;
+    background-position: center;
+}
+
+.background {
+    margin-top: 60px;
+    background-image: url(Images/grey.png);
+    background-color: darkgray;
+    background-size: cover;
+    background-position: center;
+}
+
+/*Website Title*/
+.navbar-brand {
+    font-family: Haettenschweiler;
+    font-size: x-large;
+    margin-bottom: 4px;
+}
+
+/*Table*/
+.table {
+    /*border-color:gray;*/
+    /*border-style:groove;*/
+    color: maroon;
+}
+
+/*Head of the table*/
+th {
+    font-style: oblique;
+    position: center;
+    color: maroon;
+}
+
+/*Ecriture entete champs de formulaire*/
+.form-group {
+    color: maroon;
+}
+
+/*decale tout le formulaire*/
+.form-horizontal {
+    margin: 20px;
+}

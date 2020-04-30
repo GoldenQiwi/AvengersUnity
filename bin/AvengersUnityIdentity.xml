@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AvengersUnityIdentity</name>
+    </assembly>
+    <members>
+        <member name="T:AvengersUnityIdentity.Models.Civilite">
+            <summary>
+            Classe Civil
+            </summary>
+        </member>
+        <member name="P:AvengersUnityIdentity.Models.Civil.NomComplet">
+            <summary>
+            Méthode qui renvoit un civil au format "Civ. Prenom Nom, Pays".
+            </summary>
+        </member>
+        <member name="T:AvengersUnityIdentity.Models.Crise">
+            <summary>
+            Classe Crise
+            </summary>
+        </member>
+        <member name="T:AvengersUnityIdentity.Models.Heros">
+            <summary>
+            Classe Heros
+            </summary>
+        </member>
+        <member name="T:AvengersUnityIdentity.Models.Gravite">
+            <summary>
+            Classe Incident
+            </summary>
+        </member>
+        <member name="T:AvengersUnityIdentity.Models.Urgence">
+            <summary>
+            Classe Mission
+            </summary>
+        </member>
+        <member name="T:AvengersUnityIdentity.Models.Organisation">
+            <summary>
+            Classe Organisation
+            </summary>
+        </member>
+        <member name="P:AvengersUnityIdentity.Models.Organisation.NomComplet">
+            <summary>
+            Méthode "NomComplet" qui renvoit les Organisations au format "Nom_Organisation, Pays"
+            </summary>
+        </member>
+        <member name="T:AvengersUnityIdentity.Models.Pays">
+            <summary>
+            Classe Pays
+            </summary>
+        </member>
+        <member name="T:AvengersUnityIdentity.Models.Rapport">
+            <summary>
+            Classe Rapport
+            </summary>
+        </member>
+        <member name="T:AvengersUnityIdentity.Models.Niveau">
+            <summary>
+            Classe Satisfaction
+            </summary>
+        </member>
+        <member name="T:AvengersUnityIdentity.Models.Vilain">
+            <summary>
+            Classe Vilain
+            </summary>
+        </member>
+    </members>
+</doc>

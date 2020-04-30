@@ -1,0 +1,46 @@
+﻿@model IEnumerable<AvengersUnityIdentity.Models.Rapport>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="jumbotron background">
+
+    <h2>Rapports</h2>
+
+    <p>
+        @Html.ActionLink("Rédiger un rapport", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Mission.Titre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mission.Titre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.ActionLink("Consulter", "Details", new { id = item.RapportID }) |
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

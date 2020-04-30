@@ -1,0 +1,59 @@
+﻿@model AvengersUnityIdentity.Models.CustomUserRole
+
+@{
+    ViewBag.Title = "Create";
+}
+    <div class="jumbotron background">
+        <h2>Donner un rôle</h2>
+
+
+        @using (Html.BeginForm())
+        {
+            if (Request.IsAuthenticated)
+            {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.UserId, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.UserId, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.UserId, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RoleId, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.RoleId, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.RoleId, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Confirmer" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+        <div class="jumbotron text-center">
+            <h2>Vous devez être connecté pour continuer</h2>
+            <p>@Html.ActionLink("Se connecter", "Login", "Account")</p>
+
+        </div>
+        }
+        }
+
+        <div>
+            @Html.ActionLink("Retour", "Index")
+        </div>
+    </div>
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }
+        

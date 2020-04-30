@@ -1,0 +1,57 @@
+﻿@model IEnumerable<AvengersUnityIdentity.Models.Heros>
+
+@{
+    ViewBag.Title = "Index";
+}
+    <div class="jumbotron background">
+        <h2>Héros</h2>
+
+        <p>
+            @Html.ActionLink("Ajouter un héros", "Create")
+        </p>
+        <table class="table table-condensed">
+            <tr>
+                <th>
+                    Identité civil
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nom)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Pouvoir)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Point_Faible)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Commentaire)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Civil.Prenom)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nom)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Pouvoir)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Point_Faible)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Commentaire)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Consulter", "Details", new { id = item.HeroID })
+                    </td>
+                </tr>
+            }
+
+        </table>
+        </div>

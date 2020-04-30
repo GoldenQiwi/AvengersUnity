@@ -1,0 +1,52 @@
+﻿@model AvengersUnityIdentity.Models.Organisation
+
+@{
+    ViewBag.Title = "Details";
+}
+<div class="jumbotron background">
+
+    <h2>Informations</h2>
+
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Pays.Nom_Pays)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Pays.Nom_Pays)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.User.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.User.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Nom_Organisation)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Nom_Organisation)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Adresse)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Adresse)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Modifier", "Edit", new { id = Model.OrganisationID }) |
+        @Html.ActionLink("Supprimer", "Delete", new { id = Model.OrganisationID }) |
+        @Html.ActionLink("Retour", "Index")
+    </p>
+</div>

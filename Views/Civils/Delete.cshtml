@@ -1,0 +1,90 @@
+﻿@model AvengersUnityIdentity.Models.Civil
+
+@{
+    ViewBag.Title = "Delete";
+}
+    <div class="jumbotron background">
+        <h2>Suppression</h2>
+
+        <h3>Êtes-vous sûr de vouloir continuer ?</h3>
+        <div>
+            <hr />
+            <dl class="dl-horizontal">
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Prenom)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Prenom)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Nom)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Nom)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Civilite)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Civilite)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Pays.Nom_Pays)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Pays.Nom_Pays)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Adresse)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Adresse)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Date_de_naissance)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Date_de_naissance)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.User.Email)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.User.Email)
+                </dd>
+
+                <dt>
+                    Pseudonyme de héros
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Heros.Nom)
+                </dd>
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Supprimer" class="btn btn-default" /> |
+                    @Html.ActionLink("Retour", "Details", new { id = Model.CivilID })
+                </div>
+            }
+        </div>
+        </div>

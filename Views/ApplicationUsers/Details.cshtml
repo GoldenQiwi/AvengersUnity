@@ -1,0 +1,50 @@
+﻿@model AvengersUnityIdentity.Models.ApplicationUser
+
+@{
+    ViewBag.Title = "Details";
+}
+    <div class="jumbotron background">
+
+        <h2>Informations</h2>
+
+        <div>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Civil.Prenom)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Civil.Prenom)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Organisation.Nom_Organisation)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Organisation.Nom_Organisation)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Roles)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Roles)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Retour", "Index")
+        </p>
+    </div>

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<AvengersUnityIdentity.Models.CustomUserRole>
+
+@{
+    ViewBag.Title = "Index";
+}
+    <div class="jumbotron background">
+        <h2>Rôles et Utilisateurs</h2>
+
+        <p>
+            @Html.ActionLink("Donner un rôle à un utilisateur", "Create")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.UserId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RoleId)
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RoleId)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Modifier", "Edit", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Consulter", "Details", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Supprimer", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td>
+                </tr>
+            }
+
+        </table>
+        </div>

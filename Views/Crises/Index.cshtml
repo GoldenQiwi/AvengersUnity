@@ -1,0 +1,45 @@
+﻿@model IEnumerable<AvengersUnityIdentity.Models.Crise>
+
+@{
+    ViewBag.Title = "Index";
+}
+    <div class="jumbotron background">
+        <h2>Crises</h2>
+
+        <p>
+            @Html.ActionLink("Annoncer une crise", "Create")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Type_Crise)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objet)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Contenu)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Type_Crise)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Objet)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Contenu)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Consulter", "Details", new { id = item.CriseID })
+                    </td>
+                </tr>
+            }
+
+        </table>
+        </div>

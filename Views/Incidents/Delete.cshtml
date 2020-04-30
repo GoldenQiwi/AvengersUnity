@@ -1,0 +1,66 @@
+﻿@model AvengersUnityIdentity.Models.Incident
+
+@{
+    ViewBag.Title = "Delete";
+}
+<div class="jumbotron background">
+
+    <h2>Supprimer</h2>
+
+    <h3>Êtes-vous sûr de vouloir continuer ?</h3>
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.User.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.User.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Nom_Incident)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Nom_Incident)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Gravite)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Gravite)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Type_degat)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Type_degat)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Lieu)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Lieu)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Supprimer" class="btn btn-default" /> |
+                @Html.ActionLink("Retour", "Details", new { id = Model.IncidentID })
+            </div>
+        }
+    </div>
+</div>

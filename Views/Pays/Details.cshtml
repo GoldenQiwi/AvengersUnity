@@ -1,0 +1,28 @@
+﻿@model AvengersUnityIdentity.Models.Pays
+
+@{
+    ViewBag.Title = "Details";
+}
+<div class="jumbotron background">
+
+    <h2>Informations</h2>
+
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Nom_Pays)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Nom_Pays)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Modifier", "Edit", new { id = Model.PaysID }) |
+        @Html.ActionLink("Supprimer", "Delete", new { id = Model.PaysID }) |
+        @Html.ActionLink("Retour", "Index")
+    </p>
+</div>

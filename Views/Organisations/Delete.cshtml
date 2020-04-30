@@ -1,0 +1,58 @@
+﻿@model AvengersUnityIdentity.Models.Organisation
+
+@{
+    ViewBag.Title = "Delete";
+}
+<div class="jumbotron background">
+
+    <h2>Supprimer</h2>
+
+    <h3>Êtes-vous sûr de vouloir continuer ?</h3>
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Pays.Nom_Pays)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Pays.Nom_Pays)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.User.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.User.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Nom_Organisation)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Nom_Organisation)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Adresse)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Adresse)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Supprimer" class="btn btn-default" /> |
+                @Html.ActionLink("Retour", "Details", new { id = Model.OrganisationID })
+            </div>
+        }
+    </div>
+</div>

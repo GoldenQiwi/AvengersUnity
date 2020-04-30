@@ -1,0 +1,82 @@
+﻿@model AvengersUnityIdentity.Models.Incident
+
+@{
+    ViewBag.Title = "Create";
+}
+    <div class="jumbotron background">
+        <h2>Déclarer un incident</h2>
+
+
+        @using (Html.BeginForm())
+        {
+            if (Request.IsAuthenticated)
+            {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.UserId, "UserId", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("UserId", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.UserId, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Nom_Incident, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Nom_Incident, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Nom_Incident, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Gravite, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EnumDropDownListFor(model => model.Gravite, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Gravite, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Type_degat, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EnumDropDownListFor(model => model.Type_degat, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Type_degat, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Lieu, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Lieu, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Lieu, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Confirmer" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+        <div class="jumbotron text-center">
+            <h2>Vous devez être connecté pour continuer</h2>
+            <p>@Html.ActionLink("Se connecter", "Login", "Account")</p>
+
+        </div>
+        }
+        }
+
+        <div>
+            @Html.ActionLink("Retour", "Index")
+        </div>
+    </div>
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }

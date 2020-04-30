@@ -1,0 +1,82 @@
+﻿@model AvengersUnityIdentity.Models.Satisfaction
+
+@{
+    ViewBag.Title = "Delete";
+}
+<div class="jumbotron background">
+
+    <h2>Supprimer</h2>
+
+    <h3>Êtes-vous sûr de vouloir continuer ?</h3>
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Mission.Titre)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Mission.Titre)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.User.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.User.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Titre)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Titre)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Identification_Heros)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Identification_Heros)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Niveau)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Niveau)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Note)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Note)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Contenu)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Contenu)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Supprimer" class="btn btn-default" /> |
+                @Html.ActionLink("Retour", "Details", new { id = Model.SatisfactionID })
+            </div>
+        }
+    </div>
+</div>

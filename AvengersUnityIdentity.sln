@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvengersUnityIdentity", "AvengersUnityIdentity.csproj", "{778421C3-730C-4FD8-AE30-AB87E0A2ADC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvengersUnityIdentityTests", "..\AvengersUnityIdentityTests\AvengersUnityIdentityTests.csproj", "{16E1BE9D-944F-4E15-850E-336C507EFD4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{778421C3-730C-4FD8-AE30-AB87E0A2ADC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{778421C3-730C-4FD8-AE30-AB87E0A2ADC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{778421C3-730C-4FD8-AE30-AB87E0A2ADC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{778421C3-730C-4FD8-AE30-AB87E0A2ADC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16E1BE9D-944F-4E15-850E-336C507EFD4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16E1BE9D-944F-4E15-850E-336C507EFD4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16E1BE9D-944F-4E15-850E-336C507EFD4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16E1BE9D-944F-4E15-850E-336C507EFD4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4A815B22-0A50-4FE6-BB4E-F78C89369F2E}
+	EndGlobalSection
+EndGlobal

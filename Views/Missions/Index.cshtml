@@ -1,0 +1,64 @@
+﻿@model IEnumerable<AvengersUnityIdentity.Models.Mission>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="jumbotron background">
+
+    <h2>Missions</h2>
+
+    <p>
+        @Html.ActionLink("Déclarer une mission", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Heros.Nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rapport.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IncidendID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Titre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Statut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Urgence)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Heros.Nom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rapport.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IncidendID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Titre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Statut)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Urgence)
+                </td>
+                <td>
+                    @Html.ActionLink("Consulter", "Details", new { id = item.MissionID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

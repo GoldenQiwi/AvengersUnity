@@ -1,0 +1,25 @@
+﻿@model AvengersUnityIdentity.Models.CustomUserRole
+
+@{
+    ViewBag.Title = "Delete";
+}
+    <div class="jumbotron background">
+        <h2>Supprimer</h2>
+
+        <h3>Êtes-vous sûr de vouloir continuer ?</h3>
+        <div>
+            <hr />
+            <dl class="dl-horizontal">
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Supprimer" class="btn btn-default" /> |
+                    @Html.ActionLink("Retour", "Index")
+                </div>
+            }
+        </div>
+</div>

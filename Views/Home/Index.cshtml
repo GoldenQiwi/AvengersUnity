@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+    <div class="jumbotron jumbotron1">
+        <h1 class="text-muted"></h1>
+        <p class=" text-muted lead"></p>
+        <p class="text-muted"></p>
+    </div>
+
+
+    <div class="jumbotron text-center pb-2 background">
+        <h2>Déclarer un incident</h2>
+        <p>
+            Si vous rencontrez un soucis, que vous êtes témoin d'un accident ou bien d'une disparition en poussière de votre voisin, vous pouvez le signaler ici.
+        </p>
+        <p class ="btn btn-default">@Html.ActionLink("Déclarer un incident", "Create", "Incidents")</p>
+    </div>
+
+    <div class="jumbotron text-center pb-2 background">
+        <h2>Missions</h2>
+        <p>Consulter la liste des missions en cours pour voir votre héros favori en action et être au courant des activités criminelles.</p>
+        <p class ="btn btn-default">@Html.ActionLink("Voir les missions", "Index", "Missions")</p>
+    </div>
+
+    <div class="jumbotron text-center pb-2 background">
+        <h2>Liste des civils</h2>
+        <p>Si vous suspectez votre voisin, ou êtes tout simplement curieux, vous pouvez voir ici la liste de tout les civils recensés à ce jours dans notre base de données.</p>
+        <p class="btn btn-default">@Html.ActionLink("Examiner la liste", "Index", "Civils")</p>
+    </div>

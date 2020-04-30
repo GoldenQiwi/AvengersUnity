@@ -1,0 +1,34 @@
+﻿@model IEnumerable<AvengersUnityIdentity.Models.Pays>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="jumbotron background">
+
+    <h2>Pays</h2>
+
+    <p>
+        @Html.ActionLink("Ajouter un pays", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nom_Pays)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nom_Pays)
+                </td>
+                <td>
+                    @Html.ActionLink("Consulter", "Details", new { id = item.PaysID }) |
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

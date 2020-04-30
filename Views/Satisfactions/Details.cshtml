@@ -1,0 +1,76 @@
+﻿@model AvengersUnityIdentity.Models.Satisfaction
+
+@{
+    ViewBag.Title = "Details";
+}
+<div class="jumbotron background">
+
+    <h2>Informations</h2>
+
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Mission.Titre)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Mission.Titre)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.User.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.User.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Titre)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Titre)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Identification_Heros)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Identification_Heros)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Niveau)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Niveau)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Note)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Note)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Contenu)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Contenu)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Modifier", "Edit", new { id = Model.SatisfactionID }) |
+        @Html.ActionLink("Supprimer", "Delete", new { id = Model.SatisfactionID }) |
+        @Html.ActionLink("Retour", "Index")
+    </p>
+</div>
